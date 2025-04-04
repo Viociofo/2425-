@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Modelsim Simulation",
+            "type": "shell",
+            "command": "vsim",
+            "args": [
+                //"-do", "vlog design.v tb_design.v", // 编译代码
+                "-do","vlog *.v",
+                "-do", "vsim -voptargs=+acc work.tb_design", // 启动仿真
+                "-do", "add wave -position insertpoint sim:/tb_design/uut/*", // 添加设计模块的信号
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
