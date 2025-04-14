@@ -12,5 +12,5 @@ task.json VSCODE和MODELSIM联合仿真的脚本，配置后在VSCODE中按下sh
 
 .sof Quartus中Compilation后的下载文件
 
-FROM WUST 2022 JPX
+江鹏翔
 
